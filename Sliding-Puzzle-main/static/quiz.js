@@ -6,8 +6,6 @@ $(document).ready(function () {
   $("#resultsButton").hide();
   showResultsButton();
 
-  // Example puzzle completion logic (adjust as needed)
-
   function showNextButton() {
     let currentId = window.location.pathname.split("/").pop();
     if (currentId == 3 || !checkQuizComplete()) {
@@ -23,12 +21,5 @@ $(document).ready(function () {
     $("#nextButton").click(function () {
       window.location.href = "/quiz/" + nextId;
     });
-  }
-
-  function showResultsButton() {
-    let currentId = window.location.pathname.split("/").pop();
-    /*if (currentId == 3) {
-      $("#resultsButton").show();
-    }*/
   }
 });
